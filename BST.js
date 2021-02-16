@@ -58,22 +58,17 @@ class BinarySearchTree {
     }
   }
   _replaceWith(node) {
-    //replace a parent with a child
     if (this.parent) {
       if (this == this.parent.left) {
         this.parent.left = node;
       }
-    }
-    //if root
-    else {
+    } else {
       if (node) {
         this.key = node.key;
         this.value = node.value;
         this.left = node.left;
         this.right = node.right;
-      }
-      //nullify
-      else {
+      } else {
         this.key = null;
         this.value = null;
         this.left = null;
